@@ -1,0 +1,69 @@
+/*--------------------------------------*/
+/* SECTION#6 PLANS*/
+/*--------------------------------------*/
+
+footer{
+  background-color:#333;
+  padding:50px;
+  font-size:80%;
+
+  .footer-nav{
+    list-style: none;
+    float:left;
+
+    a:link, a:visited{
+      text-decoration: none;
+      color:#888;
+      transition:color .3s ease;
+    }
+
+    a:hover, a:active{
+      color:#ddd;
+    }
+  }
+
+  .social-links{
+    list-style: none;
+    float:right;
+
+    a:link, a:visited{
+      text-decoration: none;
+      color:#888;
+      font-size:160%;
+
+      .ion-social-facebook,.ion-social-twitter,.ion-social-googleplus,.ion-social-instagram{
+        transition:color .4s ease;
+      }
+    }
+
+    .ion-social-facebook:hover, .ion-social-facebook:active{
+      color:#3b5998;
+    }
+
+    .ion-social-twitter:hover, .ion-social-twitter:active{
+      color:#00aced;
+    }
+    .ion-social-googleplus:hover, .ion-social-googleplus:active{
+      color:#dd4b39;
+    }
+    .ion-social-instagram:hover, .ion-social-instagram:active{
+      color:#125688;
+    }
+  }
+
+  li{
+    display:inline-block;
+    margin-right:20px;
+
+    &:last-child{
+      margin-right:0;
+    }
+  }
+
+  p{
+    color:#888;
+    text-align:center;
+    margin-top:20px;
+  }
+
+}

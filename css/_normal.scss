@@ -1,0 +1,155 @@
+$light:#fff;
+$grey:#555;
+$font-size:20px;
+$font-weight:300;
+$orange: #e67e22;
+
+@mixin icon-big{
+  font-size:350%;
+  display:block;
+  color:$orange;
+  margin-bottom:10px;
+}
+
+@mixin parasLong{
+  line-height:145%;//120%-145%
+  width:70%;
+  margin-left:15%;//to get it in the middle. 70% so remaining 30% cut it in half
+}
+
+@mixin box-style{
+  padding:1%;
+}
+@mixin heading-tags{
+  font-weight:$font-weight;//h's come with some bold
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin h1{
+  color:$light;
+  font-size:240%;//20px is the original so 200% makes it 40px.% because make it relative - best way for responsive
+  font-weight:$font-weight;//h1 comes with more bold
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing:4px;
+  margin-bottom:20px;
+}
+
+@mixin h2{
+  font-size:180%;
+  font-weight:$font-weight;//h2 comes with more bold
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing:2px;
+  text-align:center;
+  margin-bottom:30px;
+
+  &:after{
+    display:block;
+    height:2px;
+    background-color:$orange;
+    content:" ";
+    width:100px;
+    margin:0 auto;
+    margin-top:30px;
+  }
+}
+
+@mixin h3{
+  font-size:110%;
+  margin-bottom:15px;
+  @include heading-tags;
+}
+
+@mixin genericLinks(){
+  a{
+    color:$orange !important;
+    text-decoration: none;
+    border-bottom:1px solid $orange;
+    padding-bottom:1px;
+  }
+}
+
+@mixin icon-small{
+  display:inline-block;//able to add width with inline-block then can easily center with text-align
+  width:30px;
+  text-align:center;
+  color: $orange;
+  font-size:120%;
+  margin-right:10px;
+}
+
+//BUTTONS GENERAL STYLES
+.btn:link, .btn:visited{
+  display:inline-block;
+  padding:10px 30px;
+  font-weight:$font-weight;
+  text-decoration: none;
+  border-radius: 5px;
+  transition:all .4s ease;
+
+  &:hover,&:active{
+    background-color: #cf6d17;
+  }
+}
+
+//BTN-FULL
+.btn-full:link, .btn-full:visited{
+  background-color:$orange;
+  border:1px solid $orange;
+  color:$light;
+  margin-right:15px;
+
+  &:hover,&:active{
+    border-color: #cf6d17;
+  }
+}
+
+//BTN-GHOST
+.btn-ghost:link, .btn-ghost:visited{
+  border:1px solid $orange;
+  color: $orange;
+
+  &:hover,&:active{
+    border-color: #cf6d17;
+    color:$light;
+  }
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+
+}
+body{
+  margin:0;
+  padding:0;
+  background-color:$light;
+  color:$grey;
+  font-family:'Lato', 'Arial', sans-serif;//if lato cant be displayed then use arial and etc.
+  font-weight: $font-weight;
+  font-size:$font-size;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  padding:0;
+}
+p,img,a,ul,ol,li,span{
+  margin:0;
+  padding:0;
+}
+
+.row{
+  max-width:1140px;
+  margin:0 auto;
+}
+
+section{
+  padding:80px 0px;
+}

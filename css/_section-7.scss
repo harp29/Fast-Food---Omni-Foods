@@ -1,0 +1,42 @@
+/*--------------------------------------*/
+/* SECTION#7 FORM*/
+/*--------------------------------------*/
+.section-form{
+  h2{
+    @include h2();
+  }
+
+  .contact-form{
+    width:60%;
+    margin:0 auto;
+
+    input[type=text],
+    input[type=email],
+    select,textarea{
+      width:100%;
+      padding:7px;
+      border-radius:3px;
+      border:1px solid #ccc;
+    }
+
+    textarea{
+      height:100px;
+    }
+
+    input[type=submit]{
+      @extend .btn:link, .btn:visited;
+      @extend .btn-full:link, .btn-full:visited;
+
+    }
+
+    input[type=checkbox]{
+      margin:10px 8px 10px 0px;
+    }
+
+    *:focus{
+      outline:none;
+    }
+
+
+  }
+}

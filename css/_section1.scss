@@ -1,0 +1,38 @@
+
+/*--------------------------------------*/
+/* SECTION#1 FEATURES*/
+/*--------------------------------------*/
+.section-features{
+
+  h2{
+    @include h2();
+  }
+
+  h3{
+    @include heading-tags;
+    @include h3();
+  }
+
+  .long-para{
+    @include parasLong();
+    margin-bottom:30px;
+  }
+
+  .box{
+    @include box-style;
+
+  p{
+    font-size:90%;
+    line-height: 145%;
+  }
+
+    .icon-big{
+      @include icon-big();
+    }
+
+  }
+
+}
+
+
+

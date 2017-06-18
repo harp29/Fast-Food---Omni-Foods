@@ -1,0 +1,49 @@
+/*--------------------------------------*/
+/* SECTION#4 CITIES*/
+/*--------------------------------------*/
+.section-cities{
+
+  h2{
+    @include h2();
+  }
+
+  h3{
+    @include h3();
+    letter-spacing: 0px;
+  }
+
+  .box{
+    img{
+      width:100%;
+      height:auto;
+      margin-bottom:15px;
+    }
+
+    .city-feature{
+      margin-bottom:5px;
+
+      .icon-small{
+         @include  icon-small();
+
+        //secrets to align text and icons
+        line-height: 120%;
+        vertical-align: middle;
+        margin-top:-4px;
+      }
+
+      a:link,a:visited {
+        color:$orange;
+        text-decoration: none;
+        border-bottom:1px solid $orange;
+        padding-bottom:1px;
+        transition:color .3s ease, border-bottom .3s ease;
+
+        &:hover, &:active{
+          color:$grey;
+          border-bottom:1px solid transparent;
+        }
+      }
+
+    }
+  }
+}
